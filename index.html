@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Zyven — The Infinite Profile</title>
+<meta name="description" content="One identity. Infinite states. Explore beyond the profile.">
+<meta name="theme-color" content="#070708">
+<link rel="canonical" href="./" id="canon">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Zyven — The Infinite Profile">
+<meta property="og:description" content="One identity. Infinite states.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Zyven — The Infinite Profile">
+<meta name="twitter:description" content="One identity. Infinite states.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="atmos" aria-hidden="true"></div>
+<section id="intro" class="intro">
+  <h1 class="mark">ZYVEN</h1>
+  <p>One identity. Infinite states.</p>
+  <button id="enter" class="btn big" type="button">ENTER</button>
+  <small>Explore beyond the profile.</small>
+</section>
+
+<main id="app" hidden>
+  <header class="top">
+    <p id="counter" class="counter" aria-live="polite"></p>
+    <button id="save" class="btn" type="button" aria-pressed="false">Save</button>
+    <button id="menu" class="btn" type="button">Library</button>
+  </header>
+  <article id="stage" class="stage" tabindex="-1">
+    <h2 id="sh" class="sr"></h2>
+    <div id="sections" class="sections"></div>
+    <div id="chips"></div>
+    <ol id="deep" class="deep"></ol>
+  </article>
+  <nav class="dock" aria-label="Explore">
+    <div class="main">
+      <button id="prev" class="btn" type="button">Previous</button>
+      <button id="next" class="btn solid" type="button">Continue</button>
+    </div>
+    <div class="sub">
+      <button id="random" class="btn ghost" type="button">Random</button>
+      <button id="disc" class="btn ghost" type="button" aria-pressed="false">Discover</button>
+      <button id="deepb" class="btn ghost" type="button" aria-pressed="false">Deep</button>
+      <button id="back" class="btn ghost" type="button">Return</button>
+    </div>
+  </nav>
+</main>
+
+<dialog id="panel" aria-label="Library">
+  <div class="pbox">
+    <button id="pclose" class="btn" type="button">Close</button>
+    <form id="jump" novalidate>
+      <label class="sr" for="q">State number or keyword</label>
+      <input id="q" class="btn" autocomplete="off" maxlength="80" placeholder="State number or keyword">
+      <button class="btn solid" type="submit">Go</button>
+    </form>
+    <p id="pmsg" class="pmsg" role="status"></p>
+    <div class="share">
+      <button id="share" class="btn" type="button">Share</button>
+      <button id="clink" class="btn" type="button">Copy link</button>
+      <button id="cid" class="btn" type="button">Copy ID</button>
+    </div>
+    <h3>Saved</h3><ul id="favs"></ul>
+    <h3>Recent</h3><ul id="hist"></ul>
+  </div>
+</dialog>
+<div id="toast" role="status" aria-live="polite"></div>
+<script src="script.js"></script>
+</body>
+</html>
